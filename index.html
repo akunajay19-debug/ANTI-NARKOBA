@@ -4,11 +4,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Galeri Kampanye - Generasi Bersih</title>
+
+<title>Generasi Bersih - Kampanye</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Public+Sans:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -182,6 +186,7 @@ body {
 }
 
 
+
 .photo-lightbox {
   display: none;
   position: fixed;
@@ -216,12 +221,211 @@ body {
 }
 
 
+
+.visi-misi {
+  background: white;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-header h2 {
+  font-size: 35px;
+  font-weight: 900;
+  margin: 18px 0 10px;
+  color: #142d4e;
+}
+
+.section-header p {
+  color: #758093;
+  line-height: 1.7;
+}
+
+.visi-misi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.visi-card,
+.misi-card {
+  padding: 35px;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.07);
+  transition: .3s;
+}
+
+.visi-card {
+  background: linear-gradient(145deg, #102b46, #087e8b);
+  color: white;
+}
+
+.misi-card {
+  background: #f2f6fc;
+  color: #142d4e;
+}
+
+.visi-card:hover,
+.misi-card:hover {
+  transform: translateY(-7px);
+}
+
+.vm-icon {
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.visi-card h3,
+.misi-card h3 {
+  font-size: 23px;
+  font-weight: 900;
+  margin-bottom: 18px;
+}
+
+.visi-card p,
+.misi-card li {
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.misi-card ul {
+  padding-left: 20px;
+}
+
+.misi-card li {
+  margin-bottom: 9px;
+}
+
+
+
+.contact-section {
+  background: #eaf0f8;
+}
+
+.contact-box {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  background: white;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(0,0,0,.08);
+}
+
+.contact-info {
+  background: linear-gradient(145deg, #102b46, #174a70);
+  color: white;
+  padding: 45px 35px;
+}
+
+.contact-info h2 {
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.contact-info > p {
+  color: #d7e4f0;
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.contact-item span {
+  font-size: 30px;
+}
+
+.contact-item h4 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.contact-item p {
+  font-size: 13px;
+  color: #d7e4f0;
+  margin: 0;
+}
+
+.contact-form {
+  padding: 40px;
+}
+
+.contact-form h3 {
+  font-size: 25px;
+  font-weight: 900;
+  margin-bottom: 25px;
+  color: #142d4e;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  margin-top: 15px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #dce3ed;
+  border-radius: 10px;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+  transition: .3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #087e8b;
+  box-shadow: 0 0 0 3px rgba(8,126,139,.1);
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 22px;
+  background: #102b46;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 15px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.contact-form button:hover {
+  background: #087e8b;
+  transform: translateY(-3px);
+}
+
+.form-notification {
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+
 .footer {
   background: #102b46;
   color: white;
   text-align: center;
   padding: 30px 15px;
-  margin-top: 70px;
 }
 
 .footer p {
@@ -231,10 +435,32 @@ body {
 }
 
 
+
 @media(max-width: 850px) {
   .poster-grid,
   .photo-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 768px) {
+  .visi-misi-grid,
+  .contact-box {
+    grid-template-columns: 1fr;
+  }
+
+  .visi-card,
+  .misi-card {
+    padding: 25px;
+  }
+
+  .contact-info,
+  .contact-form {
+    padding: 30px 25px;
+  }
+
+  .section-header h2 {
+    font-size: 29px;
   }
 }
 
@@ -260,10 +486,12 @@ body {
     padding: 50px 18px;
   }
 }
+
 </style>
 </head>
 
 <body>
+
 
 <div class="container">
 
@@ -273,7 +501,7 @@ body {
     <p>Bersama generasi muda, wujudkan Indonesia bersih!</p>
   </header>
 
-
+  
 
   <h2 class="section-title">Poster Kampanye</h2>
 
@@ -313,10 +541,11 @@ body {
 
     <div class="photo-card">
       <img src="JAY ADVENTRE.jpeg"
-           alt="MHD AL HABSYI"
+           alt="Foto saya"
            class="gallery-photo">
+
       <div class="photo-caption">
-        <h3>MHD AL HABSYI</h3>
+        <h3>Mhd Al Habsyi</h3>
         <p>Generasi muda berani berubah.</p>
       </div>
     </div>
@@ -325,8 +554,9 @@ body {
       <img src="KAISAN.jpeg"
            alt="Foto teman pertama"
            class="gallery-photo">
+
       <div class="photo-caption">
-        <h3>KAISAN AZYAN GIANDY</h3>
+        <h3>Kaisan Azyan Giandy</h3>
         <p>Bersatu menyuarakan kebaikan.</p>
       </div>
     </div>
@@ -335,8 +565,9 @@ body {
       <img src="IJAL.jpeg"
            alt="Foto teman kedua"
            class="gallery-photo">
+
       <div class="photo-caption">
-        <h3>MHD AZAM PUTRA SYAHRIZAL</h3>
+        <h3>Mhd Azam Putra Syahrizal</h3>
         <p>Bersama menuju masa depan bersih.</p>
       </div>
     </div>
@@ -347,10 +578,143 @@ body {
 
 
 
+
+<section class="visi-misi">
+  <div class="container">
+
+    <div class="section-header">
+      <span class="gallery-label">TUJUAN KAMI</span>
+      <h2>Visi & Misi</h2>
+      <p>Membangun generasi muda yang sehat, jujur, dan berintegritas.</p>
+    </div>
+
+    <div class="visi-misi-grid">
+
+      <div class="visi-card">
+        <div class="vm-icon">🌟</div>
+        <h3>VISI KAMI</h3>
+        <p>
+          Mewujudkan generasi muda Indonesia yang sehat,
+          bebas dari narkoba, memiliki integritas tinggi,
+          serta berani menolak segala bentuk korupsi.
+        </p>
+      </div>
+
+      <div class="misi-card">
+        <div class="vm-icon">🎯</div>
+        <h3>MISI KAMI</h3>
+
+        <ul>
+          <li>Mengajak pelajar menjauhi narkoba.</li>
+          <li>Menanamkan sikap jujur dan bertanggung jawab.</li>
+          <li>Meningkatkan kesadaran tentang bahaya korupsi.</li>
+          <li>Mengadakan kegiatan positif bagi generasi muda.</li>
+          <li>Membangun lingkungan sekolah yang sehat dan bersih.</li>
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="contact-section">
+  <div class="container">
+
+    <div class="section-header">
+      <span class="gallery-label">KONTAK KAMI</span>
+      <h2>Hubungi Kami</h2>
+      <p>Punya pertanyaan atau ingin bergabung? Kirim pesan kepada kami.</p>
+    </div>
+
+    <div class="contact-box">
+
+      <div class="contact-info">
+
+        <h2>Mari Bergabung!</h2>
+
+        <p>
+          Bersama kita bisa menciptakan generasi yang
+          sehat, jujur, dan bebas dari narkoba serta korupsi.
+        </p>
+
+        <div class="contact-item">
+          <span>📢</span>
+          <div>
+            <h4>Kampanye</h4>
+            <p>Berani menyuarakan perubahan.</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <span>🤝</span>
+          <div>
+            <h4>Kebersamaan</h4>
+            <p>Bersatu membangun masa depan.</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <span>🌱</span>
+          <div>
+            <h4>Generasi Bersih</h4>
+            <p>Mulai perubahan dari diri sendiri.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <form class="contact-form" id="contactForm">
+
+        <h3>Kirim Pesan</h3>
+
+        <label for="contactName">Nama Lengkap</label>
+        <input type="text"
+               id="contactName"
+               placeholder="Masukkan nama kamu"
+               required>
+
+        <label for="contactEmail">Email</label>
+        <input type="email"
+               id="contactEmail"
+               placeholder="Masukkan email kamu"
+               required>
+
+        <label for="contactMessage">Pesan</label>
+        <textarea id="contactMessage"
+                  rows="5"
+                  placeholder="Tuliskan pesan kamu..."
+                  required></textarea>
+
+        <button type="submit">Kirim Pesan ➜</button>
+
+        <p id="formNotification" class="form-notification"></p>
+
+      </form>
+
+    </div>
+  </div>
+</section>
+
+
+
+
 <div class="photo-lightbox" id="photoLightbox">
-  <button class="close-lightbox" id="closeLightbox">&times;</button>
-  <img id="lightboxImage" src="" alt="Foto ukuran besar">
+
+  <button class="close-lightbox"
+          id="closeLightbox"
+          aria-label="Tutup">&times;</button>
+
+  <img id="lightboxImage"
+       src=""
+       alt="Foto ukuran besar">
+
 </div>
+
+
 
 
 <footer class="footer">
@@ -359,7 +723,12 @@ body {
   <p>© 2026 Generasi Bersih</p>
 </footer>
 
+
+
+
 <script>
+
+
 const photos = document.querySelectorAll(".gallery-photo");
 const lightbox = document.getElementById("photoLightbox");
 const bigImage = document.getElementById("lightboxImage");
@@ -387,6 +756,24 @@ document.addEventListener("keydown", event => {
     lightbox.classList.remove("active");
   }
 });
+
+
+
+const contactForm = document.getElementById("contactForm");
+
+contactForm.addEventListener("submit", function(event) {
+
+  event.preventDefault();
+
+  const name = document.getElementById("contactName").value;
+
+  document.getElementById("formNotification").textContent =
+    "Terima kasih, " + name + "! Pesan berhasil diperiksa.";
+
+  contactForm.reset();
+
+});
+
 </script>
 
 </body>
